@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		500968BA1699FE6D00CB41AB /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505C1AFF16998EAF00CAB17B /* AudioController.m */; };
+		505C1AF51699842700CAB17B /* ControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 505C1AF41699842700CAB17B /* ControlView.m */; };
+		505C1AF916998BDE00CAB17B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E5F795169981ED004B7B55 /* CoreGraphics.framework */; };
+		505C1AFB16998C3B00CAB17B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505C1AFA16998C3B00CAB17B /* AVFoundation.framework */; };
+		505C1AFD16998CB000CAB17B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505C1AFC16998CB000CAB17B /* AudioToolbox.framework */; };
+		50E5F792169981ED004B7B55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E5F791169981ED004B7B55 /* UIKit.framework */; };
+		50E5F794169981ED004B7B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E5F793169981ED004B7B55 /* Foundation.framework */; };
+		50E5F79C169981ED004B7B55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50E5F79A169981ED004B7B55 /* InfoPlist.strings */; };
+		50E5F79E169981ED004B7B55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5F79D169981ED004B7B55 /* main.m */; };
+		50E5F7A2169981ED004B7B55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5F7A1169981ED004B7B55 /* AppDelegate.m */; };
+		50E5F7A4169981ED004B7B55 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E5F7A3169981ED004B7B55 /* Default.png */; };
+		50E5F7A6169981ED004B7B55 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E5F7A5169981ED004B7B55 /* Default@2x.png */; };
+		50E5F7A8169981ED004B7B55 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E5F7A7169981ED004B7B55 /* Default-568h@2x.png */; };
+		50E5F7AB169981ED004B7B55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5F7AA169981ED004B7B55 /* ViewController.m */; };
+		50E5F7AE169981ED004B7B55 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E5F7AC169981ED004B7B55 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		505C1AF31699842700CAB17B /* ControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlView.h; sourceTree = "<group>"; };
+		505C1AF41699842700CAB17B /* ControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlView.m; sourceTree = "<group>"; };
+		505C1AFA16998C3B00CAB17B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		505C1AFC16998CB000CAB17B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		505C1AFE16998EAF00CAB17B /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		505C1AFF16998EAF00CAB17B /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		50E5F78D169981ED004B7B55 /* CATemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50E5F791169981ED004B7B55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		50E5F793169981ED004B7B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50E5F795169981ED004B7B55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50E5F799169981ED004B7B55 /* CoreAudioTemplate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreAudioTemplate-Info.plist"; sourceTree = "<group>"; };
+		50E5F79B169981ED004B7B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50E5F79D169981ED004B7B55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50E5F79F169981ED004B7B55 /* CoreAudioTemplate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreAudioTemplate-Prefix.pch"; sourceTree = "<group>"; };
+		50E5F7A0169981ED004B7B55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50E5F7A1169981ED004B7B55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50E5F7A3169981ED004B7B55 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		50E5F7A5169981ED004B7B55 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		50E5F7A7169981ED004B7B55 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		50E5F7A9169981ED004B7B55 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		50E5F7AA169981ED004B7B55 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		50E5F7AD169981ED004B7B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50E5F78A169981ED004B7B55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				505C1AFD16998CB000CAB17B /* AudioToolbox.framework in Frameworks */,
+				505C1AFB16998C3B00CAB17B /* AVFoundation.framework in Frameworks */,
+				505C1AF916998BDE00CAB17B /* CoreGraphics.framework in Frameworks */,
+				50E5F792169981ED004B7B55 /* UIKit.framework in Frameworks */,
+				50E5F794169981ED004B7B55 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50E5F782169981ED004B7B55 = {
+			isa = PBXGroup;
+			children = (
+				505C1AFC16998CB000CAB17B /* AudioToolbox.framework */,
+				505C1AFA16998C3B00CAB17B /* AVFoundation.framework */,
+				50E5F797169981ED004B7B55 /* CoreAudioTemplate */,
+				50E5F790169981ED004B7B55 /* Frameworks */,
+				50E5F78E169981ED004B7B55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50E5F78E169981ED004B7B55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50E5F78D169981ED004B7B55 /* CATemplate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50E5F790169981ED004B7B55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50E5F791169981ED004B7B55 /* UIKit.framework */,
+				50E5F793169981ED004B7B55 /* Foundation.framework */,
+				50E5F795169981ED004B7B55 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50E5F797169981ED004B7B55 /* CoreAudioTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				50E5F7A0169981ED004B7B55 /* AppDelegate.h */,
+				50E5F7A1169981ED004B7B55 /* AppDelegate.m */,
+				50E5F7A9169981ED004B7B55 /* ViewController.h */,
+				50E5F7AA169981ED004B7B55 /* ViewController.m */,
+				50E5F7AC169981ED004B7B55 /* ViewController.xib */,
+				505C1AF31699842700CAB17B /* ControlView.h */,
+				505C1AF41699842700CAB17B /* ControlView.m */,
+				505C1AFE16998EAF00CAB17B /* AudioController.h */,
+				505C1AFF16998EAF00CAB17B /* AudioController.m */,
+				50E5F798169981ED004B7B55 /* Supporting Files */,
+			);
+			path = CoreAudioTemplate;
+			sourceTree = "<group>";
+		};
+		50E5F798169981ED004B7B55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50E5F799169981ED004B7B55 /* CoreAudioTemplate-Info.plist */,
+				50E5F79A169981ED004B7B55 /* InfoPlist.strings */,
+				50E5F79D169981ED004B7B55 /* main.m */,
+				50E5F79F169981ED004B7B55 /* CoreAudioTemplate-Prefix.pch */,
+				50E5F7A3169981ED004B7B55 /* Default.png */,
+				50E5F7A5169981ED004B7B55 /* Default@2x.png */,
+				50E5F7A7169981ED004B7B55 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50E5F78C169981ED004B7B55 /* CoreAudioTemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50E5F7B4169981EE004B7B55 /* Build configuration list for PBXNativeTarget "CoreAudioTemplate" */;
+			buildPhases = (
+				50E5F789169981ED004B7B55 /* Sources */,
+				50E5F78A169981ED004B7B55 /* Frameworks */,
+				50E5F78B169981ED004B7B55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreAudioTemplate;
+			productName = CoreAudioTemplate;
+			productReference = 50E5F78D169981ED004B7B55 /* CATemplate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50E5F784169981ED004B7B55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Maxime Bokobza";
+			};
+			buildConfigurationList = 50E5F787169981ED004B7B55 /* Build configuration list for PBXProject "CoreAudioTemplate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50E5F782169981ED004B7B55;
+			productRefGroup = 50E5F78E169981ED004B7B55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50E5F78C169981ED004B7B55 /* CoreAudioTemplate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50E5F78B169981ED004B7B55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50E5F79C169981ED004B7B55 /* InfoPlist.strings in Resources */,
+				50E5F7A4169981ED004B7B55 /* Default.png in Resources */,
+				50E5F7A6169981ED004B7B55 /* Default@2x.png in Resources */,
+				50E5F7A8169981ED004B7B55 /* Default-568h@2x.png in Resources */,
+				50E5F7AE169981ED004B7B55 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50E5F789169981ED004B7B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50E5F79E169981ED004B7B55 /* main.m in Sources */,
+				50E5F7A2169981ED004B7B55 /* AppDelegate.m in Sources */,
+				50E5F7AB169981ED004B7B55 /* ViewController.m in Sources */,
+				505C1AF51699842700CAB17B /* ControlView.m in Sources */,
+				500968BA1699FE6D00CB41AB /* AudioController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50E5F79A169981ED004B7B55 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50E5F79B169981ED004B7B55 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50E5F7AC169981ED004B7B55 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50E5F7AD169981ED004B7B55 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50E5F7B2169981EE004B7B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50E5F7B3169981EE004B7B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50E5F7B5169981EE004B7B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoreAudioTemplate/CoreAudioTemplate-Prefix.pch";
+				INFOPLIST_FILE = "CoreAudioTemplate/CoreAudioTemplate-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = CATemplate;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50E5F7B6169981EE004B7B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoreAudioTemplate/CoreAudioTemplate-Prefix.pch";
+				INFOPLIST_FILE = "CoreAudioTemplate/CoreAudioTemplate-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = CATemplate;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50E5F787169981ED004B7B55 /* Build configuration list for PBXProject "CoreAudioTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50E5F7B2169981EE004B7B55 /* Debug */,
+				50E5F7B3169981EE004B7B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50E5F7B4169981EE004B7B55 /* Build configuration list for PBXNativeTarget "CoreAudioTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50E5F7B5169981EE004B7B55 /* Debug */,
+				50E5F7B6169981EE004B7B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50E5F784169981ED004B7B55 /* Project object */;
+}
