@@ -172,11 +172,11 @@ static OSStatus renderInput(void *inRefCon,
 	// Now we can manage connections using nodes in the graph.
     CheckError(AUGraphConnectNodeInput(self.graph, inputMixerNode, 0, delayNode, 0),
                "AUGraphConnectNodeInput");
-	CheckError(AUGraphConnectNodeInput(self.graph, delayNode, 0, remoteIONode, 0),
+    CheckError(AUGraphConnectNodeInput(self.graph, delayNode, 0, remoteIONode, 0),
                "AUGraphConnectNodeInput");
     
     // open the graph AudioUnits are open but not initialized (no resource allocation occurs here)
-	CheckError(AUGraphOpen(self.graph),
+    CheckError(AUGraphOpen(self.graph),
                "AUGraphOpen");
     
 	// Get a link to the mixer AU so we can talk to it later
@@ -184,38 +184,15 @@ static OSStatus renderInput(void *inRefCon,
                "AUGraphNodeInfo auInputMixer");
     CheckError(AUGraphNodeInfo(self.graph, delayNode, NULL, &gInfo.auDelay),
                "AUGraphNodeInfo auDelay");
-	CheckError(AUGraphNodeInfo(self.graph, remoteIONode, NULL, &gInfo.auRemoteIO),
+    CheckError(AUGraphNodeInfo(self.graph, remoteIONode, NULL, &gInfo.auRemoteIO),
                "AUGraphNodeInfo auRemoteIO");
-    
-	// In desc
-    AudioStreamBasicDescription inDesc = {0};
-    AudioStreamBasicDescription auDesc = {0};
-    
-    inDesc.mSampleRate = kGraphSampleRate; // set sample rate
-    inDesc.mFormatID = kAudioFormatLinearPCM;
-    inDesc.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
-    inDesc.mBytesPerPacket = 2;
-    inDesc.mFramesPerPacket = 1;
-    inDesc.mBytesPerFrame = 2;
-    inDesc.mChannelsPerFrame = 1;
-    inDesc.mBitsPerChannel = 16;
-    
-    // Others desc
-    UInt32 auSize = sizeof(auDesc);
-    CheckError(AudioUnitGetProperty(gInfo.auDelay, kAudioUnitProperty_StreamFormat,
-                                    kAudioUnitScope_Input, 0, &auDesc, &auSize),
-               "AudioUnitGetProperty auDelay");
     
     // InputMixer
     uint numbuses = 1;
     CheckError(AudioUnitSetProperty(gInfo.auInputMixer, kAudioUnitProperty_ElementCount,
                                     kAudioUnitScope_Input, 0, &numbuses, sizeof(numbuses)),
                "AudioUnitSetProperty auInputMixer ElementCount");
-    
-    CheckError(AudioUnitSetProperty(gInfo.auInputMixer, kAudioUnitProperty_StreamFormat,
-                                    kAudioUnitScope_Output, 0, &auDesc, auSize),
-               "AudioUnitSetProperty auInputMixer StreamFormat output");
-    
+        
     // Set a callback for the specified node's specified input
     AURenderCallbackStruct renderCallbackStruct;
     renderCallbackStruct.inputProc = &renderInput;
@@ -228,11 +205,33 @@ static OSStatus renderInput(void *inRefCon,
     CheckError(AUGraphSetNodeInputCallback(self.graph, inputMixerNode, 0, &renderCallbackStruct),
                "AUGraphSetNodeInputCallback inputMixerNodes");
     
-    // Set the StreamFormats
+    // In desc
+    AudioStreamBasicDescription inDesc = {0};
+    AudioStreamBasicDescription auDesc = {0};
+    
+    inDesc.mSampleRate = kGraphSampleRate; // set sample rate
+    inDesc.mFormatID = kAudioFormatLinearPCM;
+    inDesc.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
+    inDesc.mBytesPerPacket = 2;
+    inDesc.mFramesPerPacket = 1;
+    inDesc.mBytesPerFrame = 2;
+    inDesc.mChannelsPerFrame = 1;
+    inDesc.mBitsPerChannel = 16;
+    
+    // Get the delay stream format
+    UInt32 auSize = sizeof(auDesc);
+    CheckError(AudioUnitGetProperty(gInfo.auDelay, kAudioUnitProperty_StreamFormat,
+                                    kAudioUnitScope_Input, 0, &auDesc, &auSize),
+               "AudioUnitGetProperty auDelay");
+    
+    // Set the stream formats
     CheckError(AudioUnitSetProperty(gInfo.auInputMixer, kAudioUnitProperty_StreamFormat,
                                     kAudioUnitScope_Input, 0, &inDesc, sizeof(inDesc)),
-               "AudioUnitSetProperty auInputMixer StreamFormat input");
-    
+               "AudioUnitSetProperty auInputMixer StreamFormat input");    
+    CheckError(AudioUnitSetProperty(gInfo.auInputMixer, kAudioUnitProperty_StreamFormat,
+                                    kAudioUnitScope_Output, 0, &auDesc, auSize),
+               "AudioUnitSetProperty auInputMixer StreamFormat output");
+
     CheckError(AudioUnitSetProperty(gInfo.auDelay, kAudioUnitProperty_StreamFormat,
                                     kAudioUnitScope_Input, 0, &auDesc, auSize),
                "AudioUnitSetProperty auDelay StreamFormat input");
